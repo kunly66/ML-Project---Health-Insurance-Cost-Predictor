@@ -1,10 +1,21 @@
-# codebasics ML course: codebasics.io, all rights reserverd
 
 import streamlit as st
 from prediction_helper import predict
 
 # Define the page layout
-st.title('Health Insurance Cost Predictor')
+st.set_page_config(
+    page_title="Health Insurance Cost Predictor",
+    page_icon="logo.png",
+    layout="wide"
+)
+
+col1, col2 = st.columns([1, 4])
+
+with col1:
+    st.image("logo.png", width=120)
+
+with col2:
+    st.title("Health Insurance Cost Predictor")
 
 categorical_options = {
     'Gender': ['Male', 'Female'],
